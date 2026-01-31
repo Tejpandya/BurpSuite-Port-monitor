@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group 'com.example'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.portswigger.burp.extensions:montoya-api:2023.9'
+    implementation 'org.jfree:jfreechart:1.5.3'
+    implementation 'com.formdev:flatlaf:3.2.5'
+}
+
+shadowJar {
+    archiveBaseName.set('burp-port-monitor')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+
+}
