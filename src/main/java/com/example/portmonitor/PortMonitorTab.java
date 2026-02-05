@@ -41,11 +41,7 @@ public class PortMonitorTab extends JPanel {
     private final List<String> eventLog = Collections.synchronizedList(new ArrayList<>());
 
     public PortMonitorTab(MontoyaApi api) {
-        this.api = api;
-        
-        // Apply FlatLaf to this panel specifically
-        FlatLightLaf.setup();
-        SwingUtilities.updateComponentTreeUI(this);
+    this.api = api;
 
         setLayout(new BorderLayout(10, 10));
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
